@@ -36,7 +36,7 @@ export default function PoemDashboard({ poemsPromise }: DashboardProps) {
                     placeholder="Filter poems by title or bard..."
                     value={searchTerm}
                     onChange={handleSearchChange}
-                    className="w-full px-4 py-3 rounded-lg border bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+                    className="w-full text-black dark:text-white px-4 py-3 rounded-lg border bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
             </div>
 
