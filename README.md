@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Poetic Pookie 🌸
 
-## Getting Started
+A modern poetry reader and frontend playground built using the latest features of React and Next.js.
 
-First, run the development server:
+The project focuses on:
+
+- React 19 features
+- Server Components
+- Concurrent rendering
+- Modern data fetching
+- Performance optimization
+- Clean UI architecture
+
+Poetry data is fetched from the [PoetryDB API](https://poetrydb.org/random).
+
+---
+
+# 🛠️ Tech Stack & Key Features
+
+## 1. React 19 Compiler
+
+- Automatic component optimization
+- Reduces need for `useMemo`, `useCallback`, and `React.memo`
+- Encourages cleaner React code
+
+### ⚠️ Note
+
+- Components must remain pure and follow React rules
+- Invalid patterns can prevent compiler optimizations
+
+---
+
+## 2. Next.js 16 App Router & Server Components
+
+- Server-side data fetching using React Server Components (RSC)
+- Smaller client-side JavaScript bundle
+- Better SEO and faster initial load
+
+### ⚠️ Note
+
+- Server Components cannot access:
+  - `window`
+  - `document`
+  - `localStorage`
+
+---
+
+## 3. React 19 `use()` Hook
+
+- Handles async data directly during rendering
+- Works well with Suspense
+- Simplifies async UI handling
+
+### ⚠️ Note
+
+- Avoid creating promises inside Client Components
+- It can cause repeated renders or infinite fetch loops
+
+---
+
+## 4. Concurrent Rendering with `useTransition`
+
+- Keeps UI responsive during expensive updates
+- Improves search and filtering performance
+- Prevents UI blocking during large renders
+
+### ⚠️ Note
+
+- Only state updates should run inside transitions
+- Use `isPending` for loading feedback
+
+---
+
+## 5. Tailwind CSS v4 & Theme Support
+
+- Utility-first responsive styling
+- Dark/light mode support using `next-themes`
+- Shared theme sync across browser tabs
+
+### ⚠️ Note
+
+- Theme providers may require client-side rendering
+- Be careful about hydration mismatches
+
+---
+
+# 📂 Project Structure
+
+```text
+src/
+├── app/
+├── components/
+├── config/
+└── types/
+```
+
+### Main Modules
+
+| Folder        | Purpose                   |
+| ------------- | ------------------------- |
+| `app/`        | Routing and pages         |
+| `components/` | Reusable UI components    |
+| `config/`     | Static configuration data |
+| `types/`      | TypeScript types          |
+
+---
+
+# 🚀 Getting Started
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/mohdasifabid/poetic-pookie.git
+cd poetic-pookie
+```
+
+---
+
+## 2. Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3. Install React Compiler
+
+```bash
+npm install -D babel-plugin-react-compiler
+```
+
+---
+
+## 4. Start Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 👤 Author
 
-To learn more about Next.js, take a look at the following resources:
+- Mohd Asif
+- [GitHub Profile](https://github.com/mohdasifabid)
+- [Project Repository](https://github.com/mohdasifabid/poetic-pookie)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 📜 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open-source project created for learning, experimentation, and portfolio showcase.
