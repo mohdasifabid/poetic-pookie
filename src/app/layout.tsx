@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     default: "Poetic Pookie 🌸 | Explore Classical & Modern Poetry",
     template: "%s | Poetic Pookie",
   },
+  alternates: {
+    canonical: "https://poetic-pookie.vercel.app/",
+  },
   description: "Immerse yourself in Poetic Pookie. Filter, search, and discover timeless verses, stanzas, and sonnets streamed instantly from legendary bards.",
   keywords: ["poetry", "poems", "literature", "bards", "sonnets", "poetic pookie", "poetrydb"],
   authors: [{ name: "Poetic Pookie Team" }],
