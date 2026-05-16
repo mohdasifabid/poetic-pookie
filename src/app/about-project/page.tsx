@@ -5,6 +5,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "About the Architecture",
     description: "A deep dive into the high-performance technical stack power behind Poetic Pookie.",
+    alternates: {
+        canonical: "https://poetic-pookie.vercel.app/about-project",
+    },
+    keywords: ["Architecture", "Next.js", "React", "Poetic Pookie", "React Compiler", "React 19", "React 19 use", "Tailwind CSS", "Tailwind CSS v4", "PoetryDB"],
+    authors: [{ name: "Mohd Asif" }],
+    icons: {
+        icon: "🌸",
+    },
 };
 
 export default function AboutProjectPage() {
