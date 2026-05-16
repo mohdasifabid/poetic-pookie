@@ -16,7 +16,7 @@ export default function PoemDashboard({ poemsPromise }: DashboardProps) {
     const [currentPage, setCurrentPage] = useState(1);
     const [, startTransition] = useTransition();
 
-    const ITEMS_PER_PAGE = 6;
+    const ITEMS_PER_PAGE = 21;
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val = e.target.value;
